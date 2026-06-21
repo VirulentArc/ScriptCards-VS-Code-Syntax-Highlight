@@ -17,8 +17,6 @@ The extension recognizes:
 .scriptcards
 ```
 
-It intentionally does **not** claim every `.txt` file.
-
 ## Theme support
 
 This initial release is tuned for **dark VS Code themes**.
