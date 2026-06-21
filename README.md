@@ -39,7 +39,7 @@ Colors may vary between dark themes, but the syntax should remain visible in com
 
 ## What is highlighted
 
-This grammar covers the original ScriptCards syntax plus newer syntax used in modern ScriptCards scripts, including:
+This grammar covers common Roll20 ScriptCards syntax, including but not limited to:
 
 - statement prefixes such as `--#`, `--&`, `--=`, `--+`, `--?`, `--~`, `--%`, `-->`, `--^`, and `--:`
 - GOSUB, GOTO, and label targets
