@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.1
+
+Patch release.
+
+### Changed
+
+- Removed ScriptCards-specific auto-enter insertion rules from `language-configuration.json`.
+- The extension no longer automatically inserts `--` or `--%|` lines while editing loops.
+- Syntax highlighting and normal bracket/quote pairing remain unchanged.
+
 ## 1.0.0
 
 Initial GitHub release.
@@ -15,3 +25,4 @@ Initial GitHub release.
 
 - Light themes are not officially supported in this initial release.
 - The extension intentionally does not claim all `.txt` files.
+

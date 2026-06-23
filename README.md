@@ -17,17 +17,24 @@ The extension recognizes:
 .scriptcards
 ```
 
+It intentionally does **not** claim every `.txt` file.
+
 ## Theme support
 
 This initial release is tuned for **dark VS Code themes**.
 
-Light themes are not officially supported in v1.0.0. Some light themes may work acceptably, but others can produce poor contrast because VS Code themes control the final TextMate token colors.
+Light themes are not officially supported in this release. Some light themes may work acceptably, but others can produce poor contrast because VS Code themes control the final TextMate token colors.
 
 Colors may vary between dark themes, but the syntax should remain visible in common dark themes.
 
+
+## Editor Behavior
+
+This extension only provides syntax highlighting and basic bracket/quote pairing. It does not auto-insert ScriptCards statement endings, loop closers, or extra `--` lines.
+
 ## Installation from GitHub
 
-1. Download `scriptcards-vscode-syntax-highlight-1.0.0.vsix` from the GitHub release.
+1. Download `scriptcards-vscode-syntax-highlight-1.0.1.vsix` from the GitHub release.
 2. Open VS Code.
 3. Open the Extensions panel with `Ctrl+Shift+X`.
 4. Click the `...` menu at the top of the Extensions panel.
