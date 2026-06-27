@@ -1,63 +1,36 @@
 # ScriptCards VS Code Syntax Highlight
 
-Maintainer: **Tim Beasley**
+A Visual Studio Code extension for editing Roll20 ScriptCards files.
 
-Syntax highlighting for [Roll20 ScriptCards](https://github.com/kjaegers/ScriptCards) files in Visual Studio Code, VSCodium, and Code - OSS.
+## Features
 
-This extension is intended for people writing or maintaining ScriptCards macros outside Roll20, especially larger `.scard` scripts.
+- Syntax highlighting for common ScriptCards statement types, including comments, parameters, string variables, roll variables, arrays, hashes, loops, conditionals, labels, GOSUB calls, GOTO branches, output lines, storage commands, object commands, and API-related commands. Object command property keys such as `name`, `attack_type`, and `!swfxtype` are highlighted separately from their plain-text values.
+- Highlighting for ScriptCards references, including string variables, roll variables, token references, selected/source/target references, arrays, hashes, repeating-section references, and raw value references.
+- Highlighting for inline formatting and card HTML-style tags such as `[t]`, `[tr]`, `[td]`, `[b]`, `[i]`, `[c]`, `[r]`, `[F:...]`, `[img ...]`, and matching closing tags.
+- Highlighting for ScriptCards button syntax, including `[button]`, `[rbutton]`, `[sheetbutton]`, button labels, target labels, and button arguments.
+- Packaged token colors for readable ScriptCards files across common VS Code themes.
 
-## Supported files
+## Supported file types
 
-The extension recognizes:
+- `.scard`
+- `.scard.txt`
+- `.scriptcard`
+- `.scriptcards`
 
-```text
-.scard
-.scard.txt
-.scriptcard
-.scriptcards
-```
+## Usage
 
-It intentionally does **not** claim every `.txt` file.
+Install the `.vsix` file in Visual Studio Code, then open a ScriptCards file. Supported file extensions should automatically use the **Roll20 ScriptCards** language mode.
 
-## Theme support
+If a file is not detected automatically, use **Change Language Mode** and select **Roll20 ScriptCards**.
 
-This initial release is tuned for **dark VS Code themes**.
+## Commands
 
-Light themes are not officially supported in this release. Some light themes may work acceptably, but others can produce poor contrast because VS Code themes control the final TextMate token colors.
+- `ScriptCards: Apply Token Colors`
+- `ScriptCards: Use Dark Token Colors`
+- `ScriptCards: Use Light Token Colors`
+- `ScriptCards: Use High Contrast Dark Token Colors`
+- `ScriptCards: Use High Contrast Light Token Colors`
 
-Colors may vary between dark themes, but the syntax should remain visible in common dark themes.
+## Version
 
-
-## Editor Behavior
-
-This extension only provides syntax highlighting and basic bracket/quote pairing. It does not auto-insert ScriptCards statement endings, loop closers, or extra `--` lines.
-
-## Installation from GitHub
-
-1. Download `scriptcards-vscode-syntax-highlight-1.0.1.vsix` from the GitHub release.
-2. Open VS Code.
-3. Open the Extensions panel with `Ctrl+Shift+X`.
-4. Click the `...` menu at the top of the Extensions panel.
-5. Choose **Install from VSIX...**.
-6. Select the downloaded `.vsix` file.
-7. Reload VS Code if prompted.
-
-## What is highlighted
-
-This grammar covers common Roll20 ScriptCards syntax, including but not limited to:
-
-- statement prefixes such as `--#`, `--&`, `--=`, `--+`, `--?`, `--~`, `--%`, `-->`, `--^`, and `--:`
-- GOSUB, GOTO, and label targets
-- loop names, loop types, and loop parameters
-- `--~` function statements
-- array references such as `[@ArrayName(index)]`
-- hash table references such as `[:HashName("key")]`
-- object references such as `[*O:[&SomeID]:character:archived]`
-- inline calculations such as `[= ... ]`
-- handout/object modification commands such as `--!oh`, `--!h`, and `--!x`
-- pointer commands such as `--Pread` and `--Pset`
-- literal blocks such as `${ ... $}`
-
-## Notes
-
-This is a syntax-highlighting extension only. It does not run ScriptCards code, validate scripts, or connect to Roll20.
+2.0.0

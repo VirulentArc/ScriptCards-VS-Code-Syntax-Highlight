@@ -1,8 +1,8 @@
 {
-  "name": "scriptcards-vscode-syntax-highlight",
-  "displayName": "ScriptCards VS Code Syntax Highlight",
-  "description": "Syntax highlighting for Roll20 ScriptCards files in VS Code, tuned for dark themes.",
-  "version": "1.0.1",
+  "name": "scriptcards-vscode-syntax-highlight-condition-branch-test",
+  "displayName": "ScriptCards VS Code Syntax Highlight - Condition Branch Test",
+  "description": "Test build for Roll20 ScriptCards conditional branch target highlighting.",
+  "version": "2.0.0",
   "publisher": "Tim Beasley",
   "author": "Tim Beasley",
   "license": "MIT",
@@ -56,19 +56,311 @@
       "editor.tokenColorCustomizations": {
         "textMateRules": [
           {
-            "scope": "support.variable.property.loopname.scriptcards",
+            "name": "ScriptCards Packaged: comments",
+            "scope": "_comment.identifier.scriptcards, comment.line.scriptcards, meta.line.comment.roll20-scriptcards",
             "settings": {
-              "foreground": "#00E5FF"
+              "foreground": "#6B6B6B",
+              "fontStyle": "italic"
             }
           },
           {
-            "scope": "variable.other.readwrite.loopname.scriptcards, variable.other.loop.name.scriptcards, entity.name.type.loop.scriptcards",
+            "name": "ScriptCards Packaged: doubledash",
+            "scope": "doubledash.scriptcards",
             "settings": {
-              "foreground": "#00E5FF"
+              "foreground": "#616166"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: conditionQuestion",
+            "scope": "constant.character.escape.conditional-question.scriptcards, meta.identifier.condition.scriptcards constant.character.escape.conditional-question.scriptcards",
+            "settings": {
+              "foreground": "#FF7043"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: condition",
+            "scope": "meta.identifier.condition.scriptcards, meta.line.condition.roll20-scriptcards",
+            "settings": {
+              "foreground": "#FF7043"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: strings",
+            "scope": "_string.identifier.scriptcards, _string.tag.scriptcards, _string.reference.scriptcards, variable.other.info.variable.scriptcards, conditionliteral.scriptcards",
+            "settings": {
+              "foreground": "#66BB6A"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: rolls",
+            "scope": "rollidentifier.scriptcards, rolltag.scriptcards, roll.identifier.scriptcards, roll.tag.scriptcards, variable.other.roll.reference.scriptcards, variable.other.calculation.reference.scriptcards",
+            "settings": {
+              "foreground": "#FFF176"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: parameters",
+            "scope": "parameter.identifier.scriptcards, parameter.tag.scriptcards, parameter.reference.scriptcards",
+            "settings": {
+              "foreground": "#AB47BC"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: objectPropertyKeys",
+            "scope": "support.type.object-property.key.scriptcards",
+            "settings": {
+              "foreground": "#FF8A65"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: loopMarker",
+            "scope": "loop.identifier.scriptcards, keyword.control.loop.identifier.scriptcards",
+            "settings": {
+              "foreground": "#B388FF"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: loopName",
+            "scope": "support.variable.property.loopname.scriptcards, variable.other.readwrite.loopname.scriptcards, variable.other.loop.name.scriptcards, entity.name.type.loop.scriptcards",
+            "settings": {
+              "foreground": "#B388FF"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: loopMethod",
+            "scope": "keyword.control.loop.scriptcards",
+            "settings": {
+              "foreground": "#FFA726"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: loopSource",
+            "scope": "variable.other.array.source.loop.scriptcards",
+            "settings": {
+              "foreground": "#4DD0E1"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: loopRange",
+            "scope": "constant.numeric.loop.range.scriptcards",
+            "settings": {
+              "foreground": "#90A4AE"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: functionCategory",
+            "scope": "keyword.other.function.category.scriptcards, meta.function.scriptcards keyword.other.function.category.scriptcards",
+            "settings": {
+              "foreground": "#29B6F6"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: functionMethod",
+            "scope": "keyword.other.function.method.scriptcards, meta.function.scriptcards keyword.other.function.method.scriptcards, keyword.other.repeating.method.scriptcards, keyword.other.info.request-type.scriptcards",
+            "settings": {
+              "foreground": "#FFA726"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: functionResult",
+            "scope": "variable.other.function.result.scriptcards",
+            "settings": {
+              "foreground": "#F48FB1"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: arrayNames",
+            "scope": "variable.other.definition.array.scriptcards",
+            "settings": {
+              "foreground": "#4DD0E1"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: arrayValues",
+            "scope": "constant.other.array.value.scriptcards, constant.other.repeating.argument.scriptcards, string.unquoted.info.prompt.scriptcards",
+            "settings": {
+              "foreground": "#90A4AE"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: arrays",
+            "scope": "variable.other.array.reference.scriptcards, meta.function.array.scriptcards, meta.function.array.define.scriptcards",
+            "settings": {
+              "foreground": "#4DD0E1"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: hashtables",
+            "scope": "hashtable.identifier.scriptcards, hashtable.tag.scriptcards, entity.name.type.hashtable.scriptcards, variable.other.hashtable.reference.scriptcards, string.quoted.hashtable.key.scriptcards, storage.type.hashtable.identifier.scriptcards, punctuation.definition.hashtable.scriptcards",
+            "settings": {
+              "foreground": "#BA68C8"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: hashTableNames",
+            "scope": "entity.name.type.hashtable.definition.scriptcards",
+            "settings": {
+              "foreground": "#BA68C8"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: hashTableKeys",
+            "scope": "variable.other.hashtable.key.scriptcards",
+            "settings": {
+              "foreground": "#CE93D8"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: objects",
+            "scope": "variable.other.object.reference.scriptcards, variable.other.object.reference.source-token.scriptcards, variable.other.object.reference.target-token.scriptcards, variable.other.object.reference.repeating-attribute.scriptcards, variable.other.object.reference.repeating-value.scriptcards, variable.other.object.reference.campaign.scriptcards, variable.other.object.reference.page.scriptcards, roll20.attribute.reference.scriptcards, roll20.query.reference.scriptcards, table.reference.scriptcards",
+            "settings": {
+              "foreground": "#64B5F6"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: labels",
+            "scope": "branchlabel.identifier.scriptcards, branchlabel.tag.scriptcards, punctuation.definition.branchlabel.scriptcards, entity.name.function.gosub.identifier.scriptcards, punctuation.definition.gosub.scriptcards, keyword.control.goto.identifier.scriptcards, punctuation.definition.goto.scriptcards, proccall.identifier.scriptcards, proccall.tag.scriptcards, branchto.identifier.scriptcards, branchto.tag.scriptcards, string.other.branch.target.scriptcards, branchlabel.statement.scriptcards, meta.line.branchlabel.roll20-scriptcards branchlabel.statement.scriptcards, meta.line.proccall.roll20-scriptcards branchlabel.statement.scriptcards, meta.line.branchto.roll20-scriptcards branchlabel.statement.scriptcards, operator.scriptcards branchlabel.statement.scriptcards, operator.scriptcards proccall.tag.scriptcards, operator.scriptcards branchlabel.tag.scriptcards, operator.scriptcards branchto.tag.scriptcards",
+            "settings": {
+              "foreground": "#EF5350"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: operators",
+            "scope": "operator.scriptcards, keyword.operator.comparison.scriptcards, equalto.operator.scriptcards, equaltocaseinsensitive.operator.scriptcards, notequalto.operator.scriptcards, notequaltocaseinsensitive.operator.scriptcards, greaterthan.operator.scriptcards, greaterthanorequalto.operator.scriptcards, lessthan.operator.scriptcards, lessthanorequalto.operator.scriptcards, includes.operator.scriptcards, notincludes.operator.scriptcards, casesensitiveincludes.operator.scriptcards, casesensitivenotincludes.operator.scriptcards, logicaland.operator.scriptcards, logicalor.operator.scriptcards, matches.operator.scriptcards, caselessmatches.operator.scriptcards",
+            "settings": {
+              "foreground": "#EF5350"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: conditionLiterals",
+            "scope": "constant.language.undefined.scriptcards, condition.tag.scriptcards constant.language.undefined.scriptcards, condition.tag.scriptcards conditionliteral.scriptcards, meta.line.condition.roll20-scriptcards conditionliteral.scriptcards",
+            "settings": {
+              "foreground": "#C5E1A5"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: separators",
+            "scope": "separator.pipe.scriptcards, separatorpipe.scriptcards, punctuation.separator.semicolon.scriptcards, punctuation.section.parens.begin.scriptcards, punctuation.section.parens.end.scriptcards, punctuation.separator.button-target.scriptcards, punctuation.separator.key-value.css.scriptcards, punctuation.separator.key-value.scriptcards",
+            "settings": {
+              "foreground": "#9E9E9E"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: builtins",
+            "scope": "builtin.identifier.scriptcards, builtin.tag.scriptcards, support.function.builtin.identifier.scriptcards, support.function.console.identifier.scriptcards, support.function.pointer.identifier.scriptcards, support.function.repeating.identifier.scriptcards, support.function.wait.identifier.scriptcards, support.function.zorder.identifier.scriptcards",
+            "settings": {
+              "foreground": "#80CBC4"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: storage",
+            "scope": "storestorage.identifier.scriptcards, storestorage.tag.scriptcards, loadstorage.identifier.scriptcards, loadstorage.tag.scriptcards, data.identifier.scriptcards, data.tag.scriptcards, storage.type.data.identifier.scriptcards",
+            "settings": {
+              "foreground": "#FFD54F"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: api",
+            "scope": "api.identifier.scriptcards, api.tag.scriptcards, objectmod.identifier.scriptcards, objectmod.tag.scriptcards, pointer.identifier.scriptcards, pointer.tag.scriptcards, repeating.identifier.scriptcards, repeating.tag.scriptcards, visualeffect.identifier.scriptcards, visualeffect.tag.scriptcards, audioeffect.identifier.scriptcards, audioeffect.tag.scriptcards, zorder.identifier.scriptcards, zorder.tag.scriptcards, wait.identifier.scriptcards, wait.tag.scriptcards",
+            "settings": {
+              "foreground": "#DCE775"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: output",
+            "scope": "output.identifier.scriptcards, output.tag.scriptcards, echo.identifier.scriptcards, echo.tag.scriptcards, entity.name.type.echo.speaker.scriptcards, string.unquoted.echo.content.scriptcards, gmwhisper.identifier.scriptcards, gmwhisper.tag.scriptcards, info.identifier.scriptcards, info.tag.scriptcards, info.prompt.title.scriptcards, info.button.text.scriptcards, string.unquoted.button.label.scriptcards, consolelog.identifier.scriptcards, consolelog.tag.scriptcards",
+            "settings": {
+              "foreground": "#90CAF9"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: exit",
+            "scope": "exit.identifier.scriptcards, exit.tag.scriptcards, procreturn.identifier.scriptcards, procreturn.tag.scriptcards",
+            "settings": {
+              "foreground": "#F06292"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: buttonTags",
+            "scope": "markup.inline.button.tag.scriptcards",
+            "settings": {
+              "foreground": "#26A69A"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: htmlTags",
+            "scope": "markup.inline.scriptcards-html-tag.scriptcards, markup.inline-formatting.scriptcards",
+            "settings": {
+              "foreground": "#FFB74D"
+            }
+          },
+          {
+            "name": "ScriptCards Packaged: inline",
+            "scope": "support.type.property-name.css.scriptcards, string.unquoted.scriptcards, constant.character.entity.html.scriptcards, constant.other.color.reference.scriptcards, constant.character.escape.scriptcards, library.include.scriptcards, macro.wrapper.begin.scriptcards, macro.wrapper.end.scriptcards, literal.block.scriptcards",
+            "settings": {
+              "foreground": "#BDBDBD"
             }
           }
         ]
+      },
+      "[roll20-scriptcards]": {
+        "editor.semanticHighlighting.enabled": true
+      },
+      "editor.semanticTokenColorCustomizations": {
+        "rules": {
+          "scriptcardsHtmlTag": {
+            "foreground": "#FFB74D"
+          }
+        }
       }
-    }
-  }
+    },
+    "configuration": {
+      "title": "ScriptCards Syntax Highlighting",
+      "properties": {
+        "scriptcards.forceTokenColors": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically apply the packaged ScriptCards token colors so ScriptCards syntax stays readable across VS Code themes."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "scriptcardsHashSetTest.applyForcedTokenColors",
+        "title": "ScriptCards: Apply Token Colors (Hash Set Test)"
+      },
+      {
+        "command": "scriptcardsHashSetTest.forceDarkTokenColors",
+        "title": "ScriptCards: Use Dark Token Colors (Hash Set Test)"
+      },
+      {
+        "command": "scriptcardsHashSetTest.forceLightTokenColors",
+        "title": "ScriptCards: Use Light Token Colors (Hash Set Test)"
+      },
+      {
+        "command": "scriptcardsHashSetTest.forceHighContrastDarkTokenColors",
+        "title": "ScriptCards: Use High Contrast Dark Token Colors (Hash Set Test)"
+      },
+      {
+        "command": "scriptcardsHashSetTest.forceHighContrastLightTokenColors",
+        "title": "ScriptCards: Use High Contrast Light Token Colors (Hash Set Test)"
+      }
+    ],
+    "semanticTokenTypes": [
+      {
+        "id": "scriptcardsHtmlTag",
+        "description": "ScriptCards inline HTML-style tag opener/name, such as [tr, [td, [/td, [rbutton, [roll:c, or [d20."
+      }
+    ]
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "*",
+    "onLanguage:roll20-scriptcards",
+    "onCommand:scriptcardsHashSetTest.applyForcedTokenColors",
+    "onCommand:scriptcardsHashSetTest.forceDarkTokenColors",
+    "onCommand:scriptcardsHashSetTest.forceLightTokenColors",
+    "onCommand:scriptcardsHashSetTest.forceHighContrastDarkTokenColors",
+    "onCommand:scriptcardsHashSetTest.forceHighContrastLightTokenColors"
+  ]
 }

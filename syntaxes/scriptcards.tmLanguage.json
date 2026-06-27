@@ -150,7 +150,7 @@
         {
           "name": "meta.line..roll20-scriptcards",
           "begin": "(?=--)",
-          "end": "(?=\n)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statements"
@@ -201,7 +201,7 @@
               ]
             }
           },
-          "end": "(?=\n)"
+          "end": "(?=\\s+--|\\n|$)"
         },
         {
           "name": "meta.line.consolelog.roll20-scriptcards",
@@ -215,7 +215,7 @@
               ]
             }
           },
-          "end": "(?=\\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -234,7 +234,7 @@
               ]
             }
           },
-          "end": "(?=\\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -273,7 +273,7 @@
               "name": "separatorpipe.scriptcards"
             }
           },
-          "end": "(?=\\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -301,7 +301,7 @@
               ]
             }
           },
-          "end": "(?=\\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -323,7 +323,7 @@
               ]
             }
           },
-          "end": "(?=\\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -345,7 +345,7 @@
               ]
             }
           },
-          "end": "(?=\\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -367,7 +367,7 @@
               ]
             }
           },
-          "end": "(?=\n)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -389,7 +389,7 @@
               ]
             }
           },
-          "end": "(?=\n)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -408,7 +408,7 @@
               ]
             }
           },
-          "end": "(?=\n)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -427,7 +427,7 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -446,13 +446,13 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
             },
             {
-              "include": "#inline-formatting"
+              "include": "#string-content"
             }
           ]
         },
@@ -468,7 +468,7 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -487,13 +487,13 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
             },
             {
-              "include": "#inline-formatting"
+              "include": "#string-content"
             }
           ]
         },
@@ -512,7 +512,7 @@
               "name": "punctuation.definition.branchlabel.scriptcards"
             },
             "3": {
-              "name": "branchlabel.statement.scriptcards",
+              "name": "operator.scriptcards branchlabel.statement.scriptcards branchlabel.identifier.scriptcards branchlabel.tag.scriptcards string.other.branch.target.scriptcards",
               "patterns": [
                 {
                   "include": "#reference"
@@ -539,7 +539,7 @@
               "name": "punctuation.definition.goto.scriptcards"
             },
             "3": {
-              "name": "branchlabel.statement.scriptcards",
+              "name": "operator.scriptcards branchlabel.statement.scriptcards keyword.control.goto.identifier.scriptcards branchto.identifier.scriptcards branchto.tag.scriptcards string.other.branch.target.scriptcards",
               "patterns": [
                 {
                   "include": "#reference"
@@ -566,7 +566,7 @@
               "name": "punctuation.definition.gosub.scriptcards"
             },
             "3": {
-              "name": "branchlabel.statement.scriptcards",
+              "name": "operator.scriptcards branchlabel.statement.scriptcards entity.name.function.gosub.identifier.scriptcards proccall.identifier.scriptcards proccall.tag.scriptcards string.other.branch.target.scriptcards",
               "patterns": [
                 {
                   "include": "#reference"
@@ -590,7 +590,7 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#tag"
@@ -612,13 +612,19 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
             },
             {
+              "include": "#reference"
+            },
+            {
               "include": "#function-content"
+            },
+            {
+              "include": "#repeating-content"
             }
           ]
         },
@@ -645,7 +651,7 @@
               "name": "separatorpipe.scriptcards"
             }
           },
-          "end": "(?=\\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#reference"
@@ -751,7 +757,7 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -770,7 +776,7 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -816,16 +822,49 @@
               "include": "#reference"
             },
             {
+              "include": "#operators"
+            },
+            {
+              "name": "meta.loop.condition.scriptcards",
+              "match": "(?<=(?:while|until);)([^|\\n]+)",
+              "captures": {
+                "1": {
+                  "patterns": [
+                    {
+                      "include": "#reference"
+                    },
+                    {
+                      "include": "#operators"
+                    },
+                    {
+                      "include": "#quoted-text"
+                    },
+                    {
+                      "include": "#inline-formatting"
+                    }
+                  ]
+                }
+              }
+            },
+            {
               "name": "keyword.control.loop.scriptcards",
               "match": "(?<=\\|)(foreach|for|while|until|iterate)(?=;|\\s*$)"
             },
             {
-              "name": "punctuation.separator.semicolon.scriptcards",
-              "match": ";"
+              "name": "variable.other.array.source.loop.scriptcards",
+              "match": "(?<=\\bforeach;)(?![;\\s\\[])[^;|\\n\\[]+"
             },
             {
-              "name": "variable.parameter.loop.scriptcards",
-              "match": "(?<=;)(?![;\\s\\[])[^;|\\n\\[]+"
+              "name": "constant.numeric.loop.range.scriptcards",
+              "match": "(?<=\\|)(?!(?:foreach|for|while|until|iterate)(?:;|\\s*$))(?![;\\s\\[])[^;|\\n\\[]+"
+            },
+            {
+              "name": "constant.numeric.loop.range.scriptcards",
+              "match": "(?<!while;)(?<!until;)(?<=;)(?![;\\s\\[])[^;|\\n\\[]+"
+            },
+            {
+              "name": "punctuation.separator.semicolon.scriptcards",
+              "match": ";"
             },
             {
               "include": "#quoted-text"
@@ -847,10 +886,13 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
+            },
+            {
+              "include": "#objectmod-content"
             }
           ]
         },
@@ -866,7 +908,7 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -875,7 +917,7 @@
         },
         {
           "name": "meta.line.echo.roll20-scriptcards",
-          "begin": "(--e)",
+          "begin": "(--[eE])",
           "beginCaptures": {
             "0": {
               "patterns": [
@@ -885,10 +927,19 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
+            },
+            {
+              "include": "#reference"
+            },
+            {
+              "include": "#inline-formatting"
+            },
+            {
+              "include": "#echo-content"
             }
           ]
         },
@@ -904,7 +955,7 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -923,7 +974,21 @@
               ]
             }
           },
-          "end": "(?=\n|--)"
+          "end": "(?=\\s+--|\\n|$)",
+          "patterns": [
+            {
+              "include": "#statement-util"
+            },
+            {
+              "include": "#reference"
+            },
+            {
+              "include": "#quoted-text"
+            },
+            {
+              "include": "#info-content"
+            }
+          ]
         },
         {
           "name": "meta.line.gmwhisper.roll20-scriptcards",
@@ -937,7 +1002,7 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -956,7 +1021,7 @@
               ]
             }
           },
-          "end": "(?=\n|--)",
+          "end": "(?=\\s+--|\\n|$)",
           "patterns": [
             {
               "include": "#statement-util"
@@ -967,7 +1032,7 @@
     },
     "tag": {
       "name": "tag.scriptcards",
-      "match": "(?<=--(@|:|\\^|~|[cCdDhHpPrRwWzZ]|\\?|\\*|[lL]|%|!|#|\\>|=|&|[sS]|[vV]|[xX]|\\\\))[^|]+\\||(?<=--([aA]|\\*|\\+))[^|]*\\|",
+      "match": "(?<=--(@|:|\\^|~|[cCdDeEhHiIpPrRwWzZ]|\\?|\\*|[lL]|%|!|#|\\>|=|&|[sS]|[vV]|[xX]|\\\\))[^|]+\\||(?<=--([aA]|\\*|\\+))[^|]*\\|",
       "captures": {
         "0": {
           "patterns": [
@@ -1093,17 +1158,75 @@
         },
         {
           "name": "echo.tag.scriptcards",
-          "match": "(?<=--e)[^|]+\\|",
+          "match": "(?<=--[eE])([^|]*)(\\|)",
           "captures": {
-            "0": {
+            "1": {
+              "name": "entity.name.type.echo.speaker.scriptcards",
               "patterns": [
-                {
-                  "include": "#separator-pipe"
-                },
                 {
                   "include": "#reference"
                 }
               ]
+            },
+            "2": {
+              "name": "separator.pipe.scriptcards"
+            }
+          }
+        },
+        {
+          "name": "info.tag.scriptcards",
+          "match": "(?<=--[iI])([^|]*?)(;)([^|]*)(\\|)",
+          "captures": {
+            "1": {
+              "name": "info.prompt.title.scriptcards",
+              "patterns": [
+                {
+                  "include": "#reference"
+                }
+              ]
+            },
+            "2": {
+              "name": "punctuation.separator.semicolon.scriptcards"
+            },
+            "3": {
+              "name": "info.button.text.scriptcards",
+              "patterns": [
+                {
+                  "include": "#reference"
+                }
+              ]
+            },
+            "4": {
+              "name": "separator.pipe.scriptcards"
+            }
+          }
+        },
+        {
+          "name": "info.tag.scriptcards",
+          "match": "(?<=--[iI])([^|]*)(\\|)",
+          "captures": {
+            "1": {
+              "name": "info.prompt.title.scriptcards",
+              "patterns": [
+                {
+                  "include": "#reference"
+                }
+              ]
+            },
+            "2": {
+              "name": "separator.pipe.scriptcards"
+            }
+          }
+        },
+        {
+          "name": "repeating.tag.scriptcards",
+          "match": "(?<=--[rR])([^|]*)(\\|)",
+          "captures": {
+            "1": {
+              "name": "keyword.other.repeating.method.scriptcards"
+            },
+            "2": {
+              "name": "separator.pipe.scriptcards"
             }
           }
         },
@@ -1554,7 +1677,7 @@
     },
     "identifier": {
       "name": "identifier.scriptcards",
-      "match": "--(@|[aA]|:|\\^|~|[cC]|\\/|\\?|\\]|[dD]|e|[xX]|\\\\|\\*|[iI]|[lL]|%|!|\\+|#|\\>|\\<\\||[rR]|=|&|[sS]|[vV]|[hH]|[pP]|[wW]|[zZ])",
+      "match": "--(@|[aA]|:|\\^|~|[cC]|\\/|\\?|\\]|[dD]|[eE]|[xX]|\\\\|\\*|[iI]|[lL]|%|!|\\+|#|\\>|\\<\\||[rR]|=|&|[sS]|[vV]|[hH]|[pP]|[wW]|[zZ])",
       "captures": {
         "0": {
           "patterns": [
@@ -1657,15 +1780,14 @@
           }
         },
         {
-          "name": "condition.identifier.scriptcards",
-          "match": "(--)\\?",
+          "name": "meta.identifier.condition.scriptcards",
+          "match": "(--)(\\?)",
           "captures": {
-            "0": {
-              "patterns": [
-                {
-                  "include": "#doubledash"
-                }
-              ]
+            "1": {
+              "name": "doubledash.scriptcards"
+            },
+            "2": {
+              "name": "constant.character.escape.conditional-question.scriptcards"
             }
           }
         },
@@ -1684,7 +1806,7 @@
         },
         {
           "name": "echo.identifier.scriptcards",
-          "match": "(--)e",
+          "match": "(--)[eE]",
           "captures": {
             "0": {
               "patterns": [
@@ -1977,6 +2099,10 @@
     "quoted-text": {
       "patterns": [
         {
+          "name": "constant.language.undefined.scriptcards",
+          "match": "\\\"undefined(?: array)?\\\""
+        },
+        {
           "name": "conditionliteral.scriptcards",
           "match": "\"[^\"]*\"",
           "captures": {
@@ -2002,8 +2128,8 @@
     "inline-formatting": {
       "patterns": [
         {
-          "name": "markup.inline-formatting.scriptcards",
-          "match": "\\[/?(?:#|br|b|i|u|s|c|l|r|j|img|button|sheetbutton|rbutton|t|tr|td|p|h[1-6]|F)(?:[^\\]\\n]*)\\]"
+          "name": "markup.inline.scriptcards-html-tag.scriptcards",
+          "match": "\\[\\/?(?:sheetbutton|rbutton|button|roll(?::[A-Za-z])?|img|d20|br|hr|th|tr|td|h[1-6]|[bBiIuUsScClLrRjJfFtTpP])(?=[:\\s\\]])"
         },
         {
           "name": "markup.inline-formatting.scriptcards",
@@ -2061,6 +2187,202 @@
         {
           "name": "punctuation.separator.semicolon.scriptcards",
           "match": ";"
+        }
+      ]
+    },
+    "echo-content": {
+      "patterns": [
+        {
+          "include": "#button-content"
+        },
+        {
+          "include": "#reference"
+        },
+        {
+          "include": "#inline-formatting"
+        },
+        {
+          "name": "string.unquoted.echo.content.scriptcards",
+          "match": "(?<=\\|)[^\\n]*"
+        }
+      ]
+    },
+    "info-content": {
+      "patterns": [
+        {
+          "include": "#reference"
+        },
+        {
+          "include": "#quoted-text"
+        },
+        {
+          "name": "meta.info.request.scriptcards",
+          "match": "(?<=\\||;)([A-Za-z])(;)([^;|\\n]+)(;)([^|\\n]*)",
+          "captures": {
+            "1": {
+              "name": "keyword.other.info.request-type.scriptcards"
+            },
+            "2": {
+              "name": "punctuation.separator.semicolon.scriptcards"
+            },
+            "3": {
+              "name": "variable.other.info.variable.scriptcards"
+            },
+            "4": {
+              "name": "punctuation.separator.semicolon.scriptcards"
+            },
+            "5": {
+              "name": "string.unquoted.info.prompt.scriptcards",
+              "patterns": [
+                {
+                  "include": "#reference"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "punctuation.separator.semicolon.scriptcards",
+          "match": ";"
+        }
+      ]
+    },
+    "repeating-content": {
+      "patterns": [
+        {
+          "include": "#reference"
+        },
+        {
+          "include": "#quoted-text"
+        },
+        {
+          "name": "constant.other.repeating.argument.scriptcards",
+          "match": "(?<=\\||;)[^;|\\n]+"
+        },
+        {
+          "name": "punctuation.separator.semicolon.scriptcards",
+          "match": ";"
+        }
+      ]
+    },
+    "button-content": {
+      "patterns": [
+        {
+          "name": "meta.inline.button.scriptcards",
+          "match": "(\\[(?:[bB][uU][tT][tT][oO][nN]|[sS][hH][eE][eE][tT][bB][uU][tT][tT][oO][nN]|[rR][bB][uU][tT][tT][oO][nN])(?:(?:[^\\[\\]\\n])|\\[[^\\[\\]\\n]*\\])*\\])([^\\n]*?)(::)([^;\\n]+?)((;)(.*?))?(\\[/(?:[bB][uU][tT][tT][oO][nN]|[sS][hH][eE][eE][tT][bB][uU][tT][tT][oO][nN]|[rR][bB][uU][tT][tT][oO][nN])\\])",
+          "captures": {
+            "1": {
+              "name": "markup.inline.button.tag.scriptcards"
+            },
+            "2": {
+              "name": "string.unquoted.button.label.scriptcards",
+              "patterns": [
+                {
+                  "include": "#reference"
+                },
+                {
+                  "include": "#inline-formatting"
+                }
+              ]
+            },
+            "3": {
+              "name": "punctuation.separator.button-target.scriptcards"
+            },
+            "4": {
+              "name": "string.other.branch.target.scriptcards",
+              "patterns": [
+                {
+                  "include": "#reference"
+                }
+              ]
+            },
+            "6": {
+              "name": "punctuation.separator.semicolon.scriptcards"
+            },
+            "7": {
+              "name": "constant.other.button.argument.scriptcards",
+              "patterns": [
+                {
+                  "include": "#reference"
+                },
+                {
+                  "include": "#inline-formatting"
+                }
+              ]
+            },
+            "8": {
+              "name": "markup.inline.button.tag.scriptcards"
+            }
+          }
+        }
+      ]
+    },
+    "string-content": {
+      "patterns": [
+        {
+          "name": "markup.inline.scriptcards-html-tag.scriptcards",
+          "match": "\\[\\/?(?:sheetbutton|rbutton|button|roll(?::[A-Za-z])?|img|d20|br|hr|th|tr|td|h[1-6]|[bBiIuUsScClLrRjJfFtTpP])(?=[:\\s\\]])"
+        },
+        {
+          "include": "#button-content"
+        },
+        {
+          "include": "#reference"
+        },
+        {
+          "include": "#inline-formatting"
+        },
+        {
+          "name": "support.type.property-name.css.scriptcards",
+          "match": "\\b[A-Za-z-]+(?=:)"
+        },
+        {
+          "name": "punctuation.separator.key-value.css.scriptcards",
+          "match": ":"
+        },
+        {
+          "name": "punctuation.separator.semicolon.scriptcards",
+          "match": ";"
+        },
+        {
+          "name": "string.unquoted.scriptcards",
+          "match": "(?:(?!\\s+--)[^\\[\\]\\n:;])+"
+        }
+      ]
+    },
+    "objectmod-content": {
+      "patterns": [
+        {
+          "name": "meta.object-property.scriptcards",
+          "begin": "(?<=\\|)(!?[A-Za-z_][\\w-]*)(:)",
+          "beginCaptures": {
+            "1": {
+              "name": "support.type.object-property.key.scriptcards"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.scriptcards"
+            }
+          },
+          "end": "(?=\\||\\s+--|\\n|$)",
+          "patterns": [
+            {
+              "include": "#reference"
+            },
+            {
+              "include": "#quoted-text"
+            },
+            {
+              "include": "#inline-formatting"
+            },
+            {
+              "name": "string.unquoted.scriptcards",
+              "match": "[^|\\[\\]\\n]+"
+            }
+          ]
+        },
+        {
+          "name": "separator.pipe.scriptcards",
+          "match": "\\|"
         }
       ]
     }
